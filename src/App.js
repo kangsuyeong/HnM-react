@@ -1,9 +1,12 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import {Routes,Route} from "react-router-dom"
 import ProductAll from './page/ProductAll';
 import Login from './page/Login';
 import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
+
 
 // 1. 전체상품페이지, 로그인, 상품상세페이지 -> 리액트 라우터 사용!
 // 1-1. 네비게이션 바

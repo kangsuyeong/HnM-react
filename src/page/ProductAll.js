@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from '../component/ProductCard'
+import { Col, Container, Row } from 'react-bootstrap'
 
 const ProductAll = () => {
     // useEffect에서 API를 호출해야한다.
     const [productList,setProductList] = useState([])
 
     const getProducts= async()=>{
-        let url = 'http://localhost:5000/products'
+        let url = 'https://my-json-server.typicode.com/kangsuyeong/hnm-json/products'
         let response = await fetch(url)
         let data = await response.json()
         console.log("data",data)
@@ -16,9 +17,17 @@ const ProductAll = () => {
     useEffect(()=>{
         getProducts()
     },[])
+
   return (
     <div>
-      <ProductCard/>
+      <Container className=''>
+        <Row>
+          {productList.map((menu)=>(
+            <Col lg={3}><ProductCard item={menu}/></Col>
+          ))}
+        </Row>
+      </Container>
+      
     </div>
   )
 }

@@ -42,3 +42,11 @@
 .search-icon{
   position: absolute;
 }
+
+.productCard-img{
+  width: 300px;
+}
+
+.productCard-area:hover{
+  transform: scale(1.1);
+}
