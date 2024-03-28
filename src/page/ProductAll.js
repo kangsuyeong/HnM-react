@@ -18,6 +18,8 @@ const ProductAll = () => {
         getProducts()
     },[])
 
+    
+
   return (
     <div>
       <Container className=''>
