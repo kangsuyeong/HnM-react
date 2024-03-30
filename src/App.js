@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Routes,Route} from "react-router-dom"
 import ProductAll from './page/ProductAll';
 import Login from './page/Login';
-import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
 import { useEffect, useState } from 'react';
 import PrivateRoute from './route/PrivateRoute';
@@ -23,14 +22,14 @@ import PrivateRoute from './route/PrivateRoute';
 
 function App() {
   const[authenticate,setAuthenticate] = useState(false) // true면 로그인이 됨, false면 로그인이 안됌
+
   useEffect(()=>{
-    console.log("aaa",authenticate)
   },[authenticate])
   return (
     <div>
 
       {/* 공통적인 것은 Routs밖에서 만들기 */}
-      <Navbar/>
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
 
       <Routes>
         <Route path="/" element={<ProductAll/>}/>

@@ -4,8 +4,17 @@
 .login-button{
   display: flex;
   justify-content: flex-end;
-  margin: 20px;
+  align-items: center;
+  margin: 30px;
   cursor: pointer;
+}
+
+
+.search-icon{
+  cursor: pointer;
+}
+.login-button div{
+  margin-left: 5px;
 }
 
 .nav-section{
@@ -16,6 +25,7 @@
 .menu-list{
   display: flex;
   list-style-type: none;
+  margin:0px
 }
 
 .menu-list li{
@@ -25,7 +35,10 @@
 .menu-area{
   display:flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
+
 
 .inputbox{
   border: none;
@@ -34,8 +47,13 @@
   height: 23px;
 }
 
+.inputbox:focus{
+  outline: none;
+}
+
 .input-area{
-  position: relative;
+  position: absolute;
+  right: 20px;
   display: flex;
   align-items: center;
 }
@@ -45,9 +63,84 @@
 }
 
 .productCard-img{
-  width: 300px;
+  width: 100%;
 }
 
+.productCard-area{
+  background-color: white;
+}
 .productCard-area:hover{
   transform: scale(1.1);
+  z-index: 1;
+}
+
+.product-img{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login-area{
+  display:flex;
+  justify-content: center;
+}
+
+.side-login-area{
+  display: flex;
+  justify-content: space-between;
+}
+
+.side-menu-icon{
+  visibility:hidden;
+  margin: 30px;
+  cursor: pointer;
+}
+
+/* 사이드메뉴 */
+.side-menu {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: burlywood;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.side-menu-list button {
+  margin: 5px;
+  border: none;
+  background: none;
+  width: 120px;
+}
+
+.side-menu .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border: none;
+  background: none;
+}
+
+.side-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-menu-list button:hover {
+  background-color: beige;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 63rem) {
+  .side-menu-icon{
+    visibility:visible;
+  }
+  .menu-list{
+    visibility: hidden;
+  }
 }

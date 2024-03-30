@@ -15,9 +15,8 @@ const Login = ({setAuthenticate}) => {
   }
 
   return (
-    <div>
-      <Container>
-      <Form onSubmit={(event)=>loginUser(event)}>
+      <div class="login-area">
+        <Form onSubmit={(event)=>loginUser(event)}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
         <Form.Control type="email" placeholder="Enter email" />
@@ -30,15 +29,18 @@ const Login = ({setAuthenticate}) => {
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+      {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
+      </Form.Group> */}
       <Button variant="danger" type="submit">
         로그인
       </Button>
     </Form>
-      </Container>
-    </div>
+      </div>
+      
+      
+      
+    
   )
 }
 
